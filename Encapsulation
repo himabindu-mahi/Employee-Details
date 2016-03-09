@@ -1,0 +1,53 @@
+import java.io.*;
+class Employee
+{
+	private int id;                                   // private variables it should be accessed with in that class only
+	private String name;
+	private int age;
+	
+	public int getId()                                // get some data to the child class 
+	{
+		return id;
+	}
+	public String getName()
+	{
+		return name;
+	}
+	public int getAge()
+	{
+		return age;
+	}
+	public void setId(int newValue)                   // Set values in to the main class and assign to the local variables
+	{
+		id=newValue;
+	}
+	public void setName(String newValue)
+	{
+		name=newValue;
+	}
+	public void setAge(int newValue)
+	{
+		age=newValue;
+	}
+	
+}
+public class Encapsulation extends Employee
+{
+	public static void main(String args[])
+	{
+		Encapsulation en=new Encapsulation();          // Object creation
+		en.setId(527);
+		en.setName("himabindu");                       // set methods
+		en.setAge(22);
+		System.out.println("Employee Name:  "+en.getName());    //Printed private members using that method
+		System.out.println("Employee Id:  "+en.getId());
+		System.out.println("Employee Age:  "+en.getAge());
+	}
+}
+
+/* Output:--
+
+Employee Name:  himabindu
+Employee Id:  527
+Employee Age:  22
+*/
